@@ -5,6 +5,7 @@ import app from './App.vue'
 
 // 导入 MUI 的样式
 import './lib/mui/css/mui.min.css'
+import './lib/mui/css/icons-extra.css'
 
 // 按需导入 Mint-UI 中的组件
 import {
