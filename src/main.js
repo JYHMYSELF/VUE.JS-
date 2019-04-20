@@ -11,6 +11,11 @@ import VueResource from 'vue-resource'
 //2.2 安装 vue-resource 
 Vue.use(VueResource) //安装之后就可以全局使用了
 
+import moment from 'moment'
+Vue.filter('dateFormat', function (dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {
+    return moment(dataStr).format(pattern)
+})
+
 //1.3 导入自己的router.js路由模块
 import router from './router.js'
 
@@ -24,13 +29,15 @@ import './lib/mui/css/icons-extra.css'
 import {
     Header,
     Swipe,
-    SwipeItem
+    SwipeItem,
+    Button
 } from 'mint-ui'
 
 //把组件挂载到全局
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(Button.name, Button)
 
 var vm = new Vue({
     el: '#app',

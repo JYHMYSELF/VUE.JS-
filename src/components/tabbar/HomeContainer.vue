@@ -10,10 +10,10 @@
     <!-- 九宫格 到 6宫格 的改造工程 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newslist">
           <img src="../../images/menu1.png" alt>
           <div class="mui-media-body">新闻资讯</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
@@ -68,7 +68,7 @@ export default {
           // console.log(result.body);
           if (result.body.status === 0) {
             this.lunbotuList = result.body.message;
-            console.log(this.lunbotuList);
+            // console.log(this.lunbotuList);
             // Toast("加载轮播图失败");
           } else {
             Toast("加载轮播图失败");
@@ -107,7 +107,7 @@ export default {
     height: 60px;
   }
 
-  .mui-media-body{
+  .mui-media-body {
     font-size: 13px;
   }
 }
